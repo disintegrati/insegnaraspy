@@ -7,33 +7,30 @@ let increment = 0;
 let pulsazione = 0;
 var counter = 0;
 var main;
+
 var ts = timesync.create({
     server: 'http://battito.cuoredinapoli.net/timesync',
     interval: 3000
   });
 
   ts.on('change', function (offset) {
-checkSwitch = new Date().getHours();
-//    console.log('changed offset: ' + offset + ' ms');
   });
 
   setInterval(function () {
     var now = new Date(ts.now());
     if((now.getSeconds()%3==1) && (counter == 0)){
-	counter = 1;
-	increment = 0;
-	dutyCycle = 0;
-	pulsazione = 0;
-	main = setInterval(pulsa, 24);
+		counter = 1;
+		increment = 0;
+		dutyCycle = 0;
+		pulsazione = 0;
+		main = setInterval(pulsa, 24);
     }
-
- }, 1);
+}, 1);
 
 
 function pulsa() {
 		led.pwmWrite(dutyCycle);
 		dutyCycle += increment;
-		console.log(dutyCycle);
 		if (pulsazione == 0) {
 		increment = 40;
 		if (dutyCycle >=255){dutyCycle = 255; pulsazione =1;}
@@ -64,12 +61,10 @@ function pulsa() {
 	};
 
 function stopPulsa(){
-//	pulsazione = 0;
 	increment = 0;
 	counter = 0;
 	dutyCycle = 0;
 	led.pwmWrite(0);
 	clearInterval(main);
 	main = 0;
-	//console.log('ciao');
 }
