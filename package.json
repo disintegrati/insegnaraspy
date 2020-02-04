@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "pigpio": "^1.2.0",
+    "promise": "^8.0.3",
     "timesync": "^1.0.3"
   }
 }
