@@ -1,4 +1,4 @@
-# Insegna sincro con raspberry pi zero W
+# Sincronizza l'insegna
 
 Dopo aver clonato questo repo assicurati di aver installato l'ultima versione di nodejs. 
 Installa pigpio con il seguente codice: 
