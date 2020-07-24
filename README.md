@@ -4,13 +4,13 @@ Installa comitup sul tuo raspberry nella versione lite, trovi il link [qui](http
 
 # Installiamo node 
 
-_Per installare node su raspi pi 0 fai questi passaggi
+_Per installare node su raspi pi 0 fai questi passaggi_
 
 ```sh
 wget https://nodejs.org/dist/v8.9.0/node-v8.9.0-linux-armv6l.tar.gz
 tar -xzf nodexxx.tar.gz
 ```
-_Per installare node su raspi pi2 o pi3 segui questi passaggi
+_Per installare node su raspi pi2 o pi3 segui questi passaggi_
 
 digitare sul terminale
 
