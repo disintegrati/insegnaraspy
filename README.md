@@ -1,6 +1,8 @@
 # Sincronizza l'insegna
 
-Installa comitup sul tuo raspberry nella versione lite, trovi il link [qui](https://steele.debian.net/comitup/image_2020-06-05-Comitup-lite.zip) .
+Installa comitup sul tuo raspberry nella versione lite, trovi il link [qui](https://steele.debian.net/comitup/image_2020-06-05-Comitup-lite.zip).
+Connettiamoci alla rete generata dal raspi con il wifi, la rete si chiamerà comitup-#. A quel punto clicchiamoci sopra, si aprirà il browser, clicchiamo una delle reti che conosciamo e inseriamo la password dopodichè si sarà connesso alla rete
+_STAI ATTENTO INSERISCI CORRETTAMENTE LA PASSWORD_
 
 # Installiamo node 
 
@@ -89,6 +91,22 @@ Sei pronto per eseguire il file index.js così:
 ```
 sudo node index.js
 ```
+Adesso imposta in automatico il codice
+```
+sudo nano etc/rc.local
+```
+Adesso inserisci questa stringa prima di exit
+```
+sudo node home/pi/insegnaraspy/index.js &
+```
+Adesso ctrl+x e y
+
+Azzeriamo tutte le connessioni di comitup con questi comandi
+```
+comitup-cli
+d
+```
+Aspettiamo che la connessione si riavvia e con lo smartphone controlliamo se è uscita come connessione comitup-# a quel punto spegniamo e l'insegna è pronta
 
 Il pin PWM è il quinto dal basso, colonna di destra, tenendo la scheda SD del raspy verso l'alto.
 Il ground è il quarto dal basso, colonna di destra, tenendo la scheda SD del raspy verso l'alto.
