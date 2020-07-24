@@ -1,6 +1,6 @@
 # Sincronizza l'insegna
 
-Installa comitup sul tuo raspberry nella versione lite (trovi il link [qui] (https://steele.debian.net/comitup/image_2020-06-05-Comitup-lite.zip)).
+Installa comitup sul tuo raspberry nella versione lite, trovi il link [qui](https://steele.debian.net/comitup/image_2020-06-05-Comitup-lite.zip) .
 
 # Installiamo node 
 
